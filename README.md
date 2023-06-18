@@ -1,3 +1,3 @@
 # Leaderboard
 
-Calculated time: 3 h 
+Calculated time for the task with help of ChatGPT and Copilot: 3 h 

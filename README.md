@@ -13,4 +13,4 @@ Task Description:
 2) You can hardcode data on the screen using several Arrays of objects.
 3) There is only one screen in this application. User can only navigate through tabs Region, National, Global. These tabs show the same information but from different arrays.
    
-Calculated time spent for the task with help of ChatGPT and Copilot: 3 h 
+Calculated time spent for the task with help of ChatGPT and Copilot: 2:30 h 

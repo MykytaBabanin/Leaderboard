@@ -1,5 +1,10 @@
 # Leaderboard
 
+AI Tools Analytics Repository
+
+Overview
+This repository aims to analyze the usage of AI tools in developers' work, providing valuable insights and analytics. It serves as a centralized hub for collecting, processing, and visualizing data related to the adoption and impact of AI tools in the software development industry.
+
 TASK “Leaderboard”. WITH USAGE OF ANY AI TOOL, YOU LIKE:
 
 Task Description:

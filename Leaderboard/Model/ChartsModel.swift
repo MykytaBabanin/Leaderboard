@@ -11,22 +11,18 @@ enum Chart: Identifiable {
     struct ChartsViewModel {
         let id = UUID()
         let title: String
-        let leaderId: Region
-        var lists: [Region]
-        
-        var sortedList: [Region] {
-            return lists.sorted { $0.score > $1.score }
-        }
+        var regionList: [Region]
+        var runnersUp: [Region]
     }
     
     var regions: [Region] {
         switch self {
         case .global(let chartsViewModel):
-            return chartsViewModel.lists
+            return chartsViewModel.regionList
         case .nationals(let chartsViewModel):
-            return chartsViewModel.lists
+            return chartsViewModel.regionList
         case .regions(let chartsViewModel):
-            return chartsViewModel.lists
+            return chartsViewModel.regionList
         }
     }
     

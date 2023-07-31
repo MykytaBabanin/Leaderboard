@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RunnersUpPedestalView: View {
-    let leaders: [Region]
+    let chart: Chart.ChartsViewModel
     
     var body: some View {
         ZStack {
@@ -17,16 +17,23 @@ struct RunnersUpPedestalView: View {
                 .scaledToFit()
                 .frame(width: Consts.foundationSize.width, height: Consts.foundationSize.height)
                 .padding(.top, Consts.foundationPedestalPadding)
-            RunnersUpDataView(leader: leaders[1])
-                .padding(.leading, Consts.runnersUpPadding)
-            RunnersUpDataView(leader: leaders[2])
-                .padding(.trailing, Consts.runnersUpPadding)
+            runnersUpViews
+        }
+    }
+    
+    @ViewBuilder
+    private var runnersUpViews: some View {
+        ForEach(chart.runnersUp.indices, id: \.self) { index in
+            let region = chart.runnersUp[index]
+            RunnersUpDataView(runnerUp: region)
+                .padding(index == 1 ? .trailing : .leading, Consts.runnersUpPadding)
         }
     }
 }
 
+
 struct RunnersUpDataView: View {
-    let leader: Region
+    let runnerUp: Region
     
     var body: some View {
         VStack {
@@ -34,17 +41,17 @@ struct RunnersUpDataView: View {
             VStack {
                 Spacer()
                 Circle()
-                    .foregroundColor(Color(hex: leader.color))
+                    .foregroundColor(Color(hex: runnerUp.color))
                     .frame(width: Consts.circleSize, height: Consts.circleSize)
             }
             
             VStack(alignment: .center) {
-                Text(leader.name)
+                Text(runnerUp.name)
                     .font(.system(size: Consts.nameFontSize))
-                IntText(value: leader.score)
+                IntText(value: runnerUp.score)
             }
             
-            Text(leader.username)
+            Text(runnerUp.username)
                 .fontWeight(.light)
                 .font(.system(size: Consts.nameFontSize))
                 .padding(.bottom, Consts.foundationPedestalPadding)

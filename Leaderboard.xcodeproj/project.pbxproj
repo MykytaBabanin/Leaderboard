@@ -17,8 +17,9 @@
 		BB8A1B382A3DA0EF00FB8E47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A1B372A3DA0EF00FB8E47 /* ContentView.swift */; };
 		BB8A1B3A2A3DA0F000FB8E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8A1B392A3DA0F000FB8E47 /* Assets.xcassets */; };
 		BB8A1B3D2A3DA0F000FB8E47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8A1B3C2A3DA0F000FB8E47 /* Preview Assets.xcassets */; };
-		BB8C94AE2A6FFB6F00F8D161 /* Score.json in Resources */ = {isa = PBXBuildFile; fileRef = BB8C94AD2A6FFB6F00F8D161 /* Score.json */; };
 		BB8C94B32A70220800F8D161 /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C94B22A70220800F8D161 /* ChartsModel.swift */; };
+		BBBC41B42A77A79300F404E9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC41B32A77A79300F404E9 /* ErrorHandling.swift */; };
+		BBBC41B62A77A96B00F404E9 /* Score.json in Resources */ = {isa = PBXBuildFile; fileRef = BBBC41B52A77A96B00F404E9 /* Score.json */; };
 		BBF9507A2A3F565000B6DEB1 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF950792A3F565000B6DEB1 /* LeaderboardViewModel.swift */; };
 		BBF9507C2A3F5AF500B6DEB1 /* PedestalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9507B2A3F5AF500B6DEB1 /* PedestalView.swift */; };
 /* End PBXBuildFile section */
@@ -35,8 +36,9 @@
 		BB8A1B372A3DA0EF00FB8E47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB8A1B392A3DA0F000FB8E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8A1B3C2A3DA0F000FB8E47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB8C94AD2A6FFB6F00F8D161 /* Score.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Score.json; sourceTree = "<group>"; };
 		BB8C94B22A70220800F8D161 /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
+		BBBC41B32A77A79300F404E9 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		BBBC41B52A77A96B00F404E9 /* Score.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Score.json; sourceTree = "<group>"; };
 		BBF950792A3F565000B6DEB1 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		BBF9507B2A3F5AF500B6DEB1 /* PedestalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,10 +94,11 @@
 				BB8C94B12A7021F700F8D161 /* VIew */,
 				BB8C94B02A7021ED00F8D161 /* ViewModel */,
 				BB8C94AF2A7021E200F8D161 /* Model */,
-				BB8C94AD2A6FFB6F00F8D161 /* Score.json */,
 				BB8A1B352A3DA0EF00FB8E47 /* LeaderboardApp.swift */,
+				BBBC41B52A77A96B00F404E9 /* Score.json */,
 				BB5D3DC92A713E6200B74D58 /* Helper.swift */,
 				BB5D3DD02A715E6700B74D58 /* Constants.swift */,
+				BBBC41B32A77A79300F404E9 /* ErrorHandling.swift */,
 				BB8A1B392A3DA0F000FB8E47 /* Assets.xcassets */,
 				BB8A1B3B2A3DA0F000FB8E47 /* Preview Content */,
 			);
@@ -195,7 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8C94AE2A6FFB6F00F8D161 /* Score.json in Resources */,
+				BBBC41B62A77A96B00F404E9 /* Score.json in Resources */,
 				BB8A1B3D2A3DA0F000FB8E47 /* Preview Assets.xcassets in Resources */,
 				BB8A1B3A2A3DA0F000FB8E47 /* Assets.xcassets in Resources */,
 			);
@@ -217,6 +220,7 @@
 				BB5D3DD62A715F7F00B74D58 /* LeaderboardListView.swift in Sources */,
 				BB8A1B362A3DA0EF00FB8E47 /* LeaderboardApp.swift in Sources */,
 				BB5D3DCA2A713E6200B74D58 /* Helper.swift in Sources */,
+				BBBC41B42A77A79300F404E9 /* ErrorHandling.swift in Sources */,
 				BB5D3DD32A715F1B00B74D58 /* RunnersUpPedestalView.swift in Sources */,
 				BB5D3DD12A715E6700B74D58 /* Constants.swift in Sources */,
 			);

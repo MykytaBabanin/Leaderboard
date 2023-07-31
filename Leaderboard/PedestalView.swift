@@ -13,8 +13,11 @@ struct PedestalView: View {
     var body: some View {
         GeometryReader { _ in
             ZStack {
-                RunnersUpPedestalView(leaders: chartsViewModel.leaders)
-                WinnerPedestalView(winner: chartsViewModel.leaders[0])
+                if let chart = chartsViewModel.currentChart,
+                   let winner = chart.regionList.first {
+                    RunnersUpPedestalView(chart: chart)
+                    WinnerPedestalView(winner: winner)
+                }
             }
         }
     }

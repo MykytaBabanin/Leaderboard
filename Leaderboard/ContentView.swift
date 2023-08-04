@@ -8,66 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let dataSet = Region.shared.createDataSet()
-    private let segmentedTitles = Region.shared.createSegmentedPickerTitles()
+    @ObservedObject var chartsViewModel = LeaderboardViewModel()
     @State private var selection = 0
-    
+
     var body: some View {
         VStack {
-            segmentedPickerView()
-            
-            Spacer()
-
-            PedestalView(dataSet: dataSet)
-                .padding(.top, 40)
-            
-            leaderboardScrollView()
+            if !chartsViewModel.charts.isEmpty {
+                segmentedPickerView()
+                Spacer()
+                PedestalView(chartsViewModel: chartsViewModel)
+                    .padding(.top, Consts.pedestalPadding)
+                LeaderboardListView(chartsViewModel: chartsViewModel)
+            } else {
+                ProgressView()
+            }
         }
         .padding()
     }
     
     private func segmentedPickerView() -> some View {
-        Picker("", selection: $selection) {
-            ForEach(0..<dataSet.count, id: \.self) { index in
-                Text(segmentedTitles[index]).tag(index)
+        Picker("", selection: $chartsViewModel.selection) {
+            ForEach(chartsViewModel.charts.indices, id: \.self) {   index in
+                Text(title(for: chartsViewModel.charts[index]))
             }
         }
         .pickerStyle(SegmentedPickerStyle())
         .padding(.horizontal)
     }
     
-    private func leaderboardScrollView() -> some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(dataSet[selection].sorted { $0.score > $1.score }, id: \.self) { region in
-                    leaderboardRow(for: region)
-                }
-            }
+    private func title(for charts: Chart) -> String {
+        switch charts {
+        case .global(let viewModel):
+            return viewModel.title
+        case .nationals(let viewModel):
+            return viewModel.title
+        case .regions(let viewModel):
+            return viewModel.title
         }
-        .frame(height: 400)
-        .background(Color.gray)
-        .cornerRadius(40)
     }
-    
-    private func leaderboardRow(for region: Region) -> some View {
-        HStack {
-            Circle()
-                .frame(width: 50, height: 50)
-                .foregroundColor(region.color)
-            
-            VStack(alignment: .leading) {
-                Text(region.name)
-                Text("@username")
-            }
-            
-            Spacer()
-            
-            Text("\(region.score)")
-        }
-        .padding()
-    }
-}
-
-#Preview {
-    ContentView()
 }

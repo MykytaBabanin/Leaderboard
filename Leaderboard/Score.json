@@ -1,0 +1,249 @@
+{
+    "Global": [
+        {
+            "name": "Global Participant 1",
+            "score": 1,
+            "color": "#FF0000",
+            "username": "userG1"
+        },
+        {
+            "name": "Global Participant 17",
+            "score": 17,
+            "color": "#00FF00",
+            "username": "userG17"
+        },
+        {
+            "name": "Global Participant 2",
+            "score": 2,
+            "color": "#00FF00",
+            "username": "userG2"
+        },
+        {
+            "name": "Global Participant 3",
+            "score": 3,
+            "color": "#01DFD7",
+            "username": "userG3"
+        },
+        {
+            "name": "Global Participant 4",
+            "score": 4,
+            "color": "#01A9DB",
+            "username": "userG4"
+        },
+        {
+            "name": "Global Participant 21",
+            "score": 21,
+            "color": "#FF0000",
+            "username": "userG21"
+        },
+        {
+            "name": "Global Participant 22",
+            "score": 22,
+            "color": "#00FF00",
+            "username": "userG22"
+        },
+        {
+            "name": "Global Participant 23",
+            "score": 23,
+            "color": "#01DFD7",
+            "username": "userG23"
+        },
+        {
+            "name": "Global Participant 24",
+            "score": 24,
+            "color": "#01A9DB",
+            "username": "userG24"
+        },
+        {
+            "name": "Global Participant 25",
+            "score": 25,
+            "color": "#04B404",
+            "username": "userG25"
+        },
+        {
+            "name": "Global Participant 26",
+            "score": 26,
+            "color": "#FF0000",
+            "username": "userG26"
+        },
+        {
+            "name": "Global Participant 27",
+            "score": 27,
+            "color": "#00FF00",
+            "username": "userG27"
+        },
+        {
+            "name": "Global Participant 28",
+            "score": 28,
+            "color": "#01DFD7",
+            "username": "userG28"
+        },
+        {
+            "name": "Global Participant 29",
+            "score": 29,
+            "color": "#01A9DB",
+            "username": "userG29"
+        },
+        {
+            "name": "Global Participant 30",
+            "score": 30,
+            "color": "#04B404",
+            "username": "userG30"
+        },
+        {
+            "name": "Global Participant 8",
+            "score": 8,
+            "color": "#01DFD7",
+            "username": "userG8"
+        },
+        {
+            "name": "Global Participant 9",
+            "score": 9,
+            "color": "#01A9DB",
+            "username": "userG9"
+        },
+        {
+            "name": "Global Participant 10",
+            "score": 10,
+            "color": "#04B404",
+            "username": "userG10"
+        },
+        {
+            "name": "Global Participant 11",
+            "score": 11,
+            "color": "#FF0000",
+            "username": "userG11"
+        },
+        {
+            "name": "Global Participant 5",
+            "score": 5,
+            "color": "#04B404",
+            "username": "userG5"
+        },
+        {
+            "name": "Global Participant 6",
+            "score": 6,
+            "color": "#FF0000",
+            "username": "userG6"
+        },
+        {
+            "name": "Global Participant 7",
+            "score": 7,
+            "color": "#00FF00",
+            "username": "userG7"
+        },
+        {
+            "name": "Global Participant 12",
+            "score": 12,
+            "color": "#00FF00",
+            "username": "userG12"
+        },
+        {
+            "name": "Global Participant 13",
+            "score": 13,
+            "color": "#01DFD7",
+            "username": "userG13"
+        },
+        {
+            "name": "Global Participant 14",
+            "score": 14,
+            "color": "#01A9DB",
+            "username": "userG14"
+        },
+        {
+            "name": "Global Participant 15",
+            "score": 15,
+            "color": "#04B404",
+            "username": "userG15"
+        },
+        {
+            "name": "Global Participant 16",
+            "score": 16,
+            "color": "#FF0000",
+            "username": "userG16"
+        },
+        {
+            "name": "Global Participant 18",
+            "score": 18,
+            "color": "#01DFD7",
+            "username": "userG18"
+        },
+        {
+            "name": "Global Participant 19",
+            "score": 19,
+            "color": "#01A9DB",
+            "username": "userG19"
+        },
+        {
+            "name": "Global Participant 20",
+            "score": 20,
+            "color": "#04B404",
+            "username": "userG20"
+        }
+    ],
+    "Nationals": [
+        {
+            "name": "National Participant 1",
+            "score": 75,
+            "color": "#0000FF",
+            "username": "userN1"
+        },
+        {
+            "name": "National Participant 2",
+            "score": 95,
+            "color": "#FFFF00",
+            "username": "userN2"
+        },
+        {
+            "name": "National Participant 3",
+            "score": 86,
+            "color": "#088A4B",
+            "username": "userN3"
+        },
+        {
+            "name": "National Participant 4",
+            "score": 88,
+            "color": "#A901DB",
+            "username": "userN4"
+        },
+        {
+            "name": "National Participant 5",
+            "score": 82,
+            "color": "#B40431",
+            "username": "userN5"
+        },
+        
+    ],
+    "Regions": [
+        {
+            "name": "Region Participant 1",
+            "score": 90,
+            "color": "#FF00FF",
+            "username": "userR1"
+        },
+        {
+            "name": "Region Participant 2",
+            "score": 92,
+            "color": "#00FFFF",
+            "username": "userR2"
+        },
+        {
+            "name": "Region Participant 3",
+            "score": 85,
+            "color": "#FE2E2E",
+            "username": "userR3"
+        },
+        {
+            "name": "Region Participant 4",
+            "score": 88,
+            "color": "#AEB404",
+            "username": "userR4"
+        },
+        {
+            "name": "Region Participant 5",
+            "score": 80,
+            "color": "#B40404",
+            "username": "userR5"
+        },
+    ]
+}

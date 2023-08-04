@@ -8,7 +8,7 @@
 import SwiftUI
 
 protocol LeaderboardProvider: AnyObject {
-    func retreiveCharts() async throws -> [Chart]
+    func retreiveCharts(from resource: NetworkResource) async throws -> [Chart]
     func setupCharts(leaderboardData: LeaderboardData) -> [Chart]
 }
 
@@ -34,24 +34,16 @@ final class LeaderboardViewModel: LeaderboardProvider, ObservableObject {
     
     init() {
         Task {
-            do {
-                self.charts = try await retreiveCharts()
-            } catch {
-                print(error)
-            }
+            self.charts = try await retreiveCharts(from: NetworkResource.bundleResource)
         }
     }
     
-    func retreiveCharts() async throws -> [Chart] {
+    func retreiveCharts(from resource: NetworkResource) async throws -> [Chart] {
         do {
-            guard let url = Bundle.main.url(forResource: "Score", withExtension: "json") else {
-                throw NetworkError.fileNotFound
-            }
+            let url = try resource.getURL()
             do {
-                let data = try await NetworkManager.shared.fetchData(from: url)
-                let decoder = JSONDecoder()
-                let leaderboardData = try await decoder.decode(LeaderboardData.self, from: data)
-                let charts = setupCharts(leaderboardData: leaderboardData)
+                let data: LeaderboardData = try await NetworkManager.shared.fetchData(from: url)
+                let charts = setupCharts(leaderboardData: data)
                 return charts
             } catch let networkError {
                 throw NetworkError.networkError(networkError)
